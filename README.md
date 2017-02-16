@@ -23,4 +23,4 @@ $ciudad = $demo->obtener_estado_actual();
 
 **Nota:** El nombre de la ciudad (id_ciudad) para la consulta del estado del tiempo se debe obtener del listado de estaciones meteorológicas disponibles.
 
-DEMO: http://www.devs.com.ar/smn/index.php
+DEMO: http://www.devs.com.ar/smn/
