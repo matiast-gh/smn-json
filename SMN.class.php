@@ -34,7 +34,7 @@
 			$archivo_cache = $this->path_cache . 'estaciones.json';
 
 			if (($this->limite_cache == 0) or ((!file_exists($archivo_cache)) or ((strtotime("now") - filemtime($archivo_cache)) >= ($this->limite_cache * 60)) and ($this->limite_cache > 0))) {
-				if ($web = @fopen("http://www.smn.gov.ar/?mod=dpd&id=21&e=total", "r")) {
+				if ($web = @fopen("http://www3.smn.gov.ar/?mod=dpd&id=21&e=total", "r")) {
 					while (!feof ($web)) {
 						$html .= fgets($web);
 					}
@@ -73,7 +73,7 @@
 			$archivo_cache = $this->path_cache . $this->estacion . '.json';
 
 			if (($this->limite_cache == 0) or ((!file_exists($archivo_cache)) or ((strtotime("now") - filemtime($archivo_cache)) >= ($this->limite_cache * 60)) and ($this->limite_cache > 0))) {
-				if ($web = @fopen("http://www.smn.gov.ar/?mod=dpd&id=21&e=" . $this->estacion, "r")) {
+				if ($web = @fopen("http://www3.smn.gov.ar/?mod=dpd&id=21&e=" . $this->estacion, "r")) {
 					while (!feof ($web)) {
 						$html .= fgets($web);
 					}
